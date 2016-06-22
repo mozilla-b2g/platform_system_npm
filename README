@@ -1,0 +1,15 @@
+
+# npm
+
+npm is a place-holder for installing NPM packages in b2g at build time. List
+the package name in Android.mk as shown in the example below.
+
+  #
+  # 'my_package'
+  #
+
+  include $(CLEAR_VARS)
+  NPM_PACKAGE_NAME := my_package
+  include $(BUILD_NPM_PACKAGE)
+
+This will download 'my_package' and install it to '/data/node_modules'.
