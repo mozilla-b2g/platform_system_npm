@@ -15,3 +15,11 @@
 LOCAL_PATH := $(call my-dir)
 
 BUILD_NPM_PACKAGE := $(abspath $(LOCAL_PATH)/build_npm_package.mk)
+
+#
+# socket.io
+#
+
+include $(CLEAR_VARS)
+NPM_PACKAGE_NAME := socket.io
+include $(BUILD_NPM_PACKAGE)
