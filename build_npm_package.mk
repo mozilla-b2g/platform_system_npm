@@ -33,5 +33,6 @@ $(LOCAL_BUILT_MODULE): $(LOCAL_BUILT_MODULE_PATH)
 
 $(LOCAL_INSTALLED_MODULE): $(LOCAL_BUILT_MODULE)
 	@( \
+	  mkdir -p $(dir $(abspath $@)) && \
 	  tar -C $(dir $(abspath $@)) --overwrite -xf $(abspath $<) \
    ) || exit $?
